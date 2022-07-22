@@ -1,17 +1,20 @@
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
+import { Route, Routes } from 'react-router-dom';
+import Difficulty from './components/difficulty';
+import Home from './components/home';
+import Questions from './components/questions';
+import Categories from './components/categories';
 
 const App = ():JSX.Element => {
   return (
     <div>
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        minHeight="100vh"
-        sx={{ bgcolor: '#cfe8fc'}}>
-        <Button variant="contained">Start Quiz</Button>
-      </Box>
+       <Routes>
+        <Route path="/" >
+          <Route index element={<Home />} />
+          <Route path="categories" element={<Categories />}/>
+          <Route path="categories/:category/difficulty" element={<Difficulty />}/>
+          <Route path="categories/:category/difficulty/:difficulty/questions" element={<Questions />}/>
+        </Route>
+      </Routes>
     </div>
   );
 }

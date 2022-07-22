@@ -1,6 +1,6 @@
 import axios, { AxiosInstance } from "axios";
 
-const API_KEY = process.env.QUIZ_KEY;
+const API_KEY = process.env.REACT_APP_QUIZ_KEY;
 
 export class AxiosFactory {
 	async create(): Promise<AxiosInstance> {
@@ -10,6 +10,7 @@ export class AxiosFactory {
 		const instance = axios.create({
 			headers,
 		});
+		
 		return instance;
 	}
 }

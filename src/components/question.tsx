@@ -1,12 +1,24 @@
-import Button from "@mui/material/Button";
 import { Fragment } from "react";
+import Answer from "./answer";
 
-const question = ():JSX.Element => {
+const Question = () => {
+    /*const {history} = useRouter();
+
+    useEffect(() => {
+        //Disable back button in browser
+        return () => {
+            if (history.action === 'POP') {
+                history.go(1);
+            }
+        };
+    }, [history]);
+*/
     return (
         <Fragment>
-            <Button variant="contained">Start Quiz</Button>
+            <Answer id={1} text="" isCorrect={false} />
+
         </Fragment>
     );
 }
 
-export default question
+export default Question
