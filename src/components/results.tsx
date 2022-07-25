@@ -14,7 +14,7 @@ const Results = () => {
 
     return (
         <CustomBox>
-            <Stack spacing={2}>
+            <Stack spacing={2} alignItems="center">
                 <Item>
                     <h3>You've completed the Quiz!</h3>
                 </Item>
