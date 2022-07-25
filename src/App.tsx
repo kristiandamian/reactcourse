@@ -1,8 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import Difficulty from './components/difficulty';
 import Home from './components/home';
-import Questions from './components/questions';
+import FetchQuestions from './components/fetch-questions';
 import Categories from './components/categories';
+import Question from './components/question';
+import Results from './components/results';
 
 const App = ():JSX.Element => {
   return (
@@ -12,7 +14,9 @@ const App = ():JSX.Element => {
           <Route index element={<Home />} />
           <Route path="categories" element={<Categories />}/>
           <Route path="categories/:category/difficulty" element={<Difficulty />}/>
-          <Route path="categories/:category/difficulty/:difficulty/questions" element={<Questions />}/>
+          <Route path="categories/:category/difficulty/:difficulty/questions" element={<FetchQuestions />}/>
+          <Route path="question/:questionNumber" element={<Question />}/>
+          <Route path="results" element={<Results />}/>
         </Route>
       </Routes>
     </div>

@@ -1,5 +1,5 @@
 export default interface AnswerFields {
-    id: number,
+    id: string, 
     text: string, 
     isCorrect: boolean,
 }

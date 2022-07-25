@@ -4,7 +4,7 @@ import Item from '@mui/material/Stack';
 import CustomBox from './customBox';
 
 const Categories = ():JSX.Element => {
-    let categories = ["Linux", "DevOps", "Networking", "Cloud", "Docker", "Kubernetes", "All"];
+    let categories = ["Code", "SQL", "Linux", "DevOps", "Docker", "All"];
     
     return (
       <CustomBox>
